@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Times Converter</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<style>
+    table {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }   
+
+    th {
+        padding: 20px;
+        color: #FFFFFF;
+    }
+
+    body {
+        background-color:#044365;
+        text-align: center;
+        color: #FFFFFF;
+    }
+</style>
+<body><br><br>
+    <h1>Time Converter</h1><br>
+    <h3>Convert time</h3><br>
+<script>
+    function secToMin() {
+        var secx = document.getElementById('seconds').value;
+        var minutes = secx / 60 + " Minutes";
+        document.getElementById('secResult').innerHTML = minutes;
+    }
+    function secToHour() {
+        var secx = document.getElementById('seconds').value;
+        var hours = secx / 3600 + " Hours";
+        document.getElementById('secResult').innerHTML = hours;
+    }
+    function secToDay() {
+        var secx = document.getElementById('seconds').value;
+        var days = secx / 86400 + " Days";
+        document.getElementById('secResult').innerHTML = days;
+    }
+    function minToSec() {
+        var minx = document.getElementById('minutes').value;
+        var seconds = minx * 60 + " Seconds";
+        document.getElementById('minResult').innerHTML = seconds;
+    }
+    function minToHour() {
+        var minx = document.getElementById('minutes').value;
+        var hours = minx / 60 + " Hours";
+        document.getElementById('minResult').innerHTML = hours;
+    }
+    function minToDay() {
+        var minx = document.getElementById('minutes').value;
+        var days = minx / 1440 + " Days";
+        document.getElementById('minResult').innerHTML = days;
+    }
+    function hourToSec() {
+        var hourx = document.getElementById('hours').value;
+        var seconds = hourx * 3600 + " Seconds";
+        document.getElementById('hourResult').innerHTML = seconds;
+    }
+    function hourToMin() {
+        var hourx = document.getElementById('hours').value;
+        var minutes = hourx * 60 + " Minutes";
+        document.getElementById('hourResult').innerHTML = minutes;
+    }
+    function hourToDay() {
+        var hourx = document.getElementById('hours').value;
+        var days = hourx / 24 + " Days";
+        document.getElementById('hourResult').innerHTML = days;
+    }
+    function dayToSec() {
+        var dayx = document.getElementById('days').value;
+        var seconds = dayx * 86400 + " Seconds";
+        document.getElementById('dayResult').innerHTML = seconds;
+    }
+    function dayToMin() {
+        var dayx = document.getElementById('days').value;
+        var minutes = dayx * 1440 + " Minutes";
+        document.getElementById('dayResult').innerHTML = minutes;
+    }
+    function dayToHour() {
+        var dayx = document.getElementById('days').value;
+        var hours = dayx * 24 + " Hours";
+        document.getElementById('dayResult').innerHTML = hours;
+    }
+</script>
+<table  >
+    <tr>
+        <th style="background-color: #0270AB">Seconds<br>
+            <p><input type="text" id="seconds" placeholder="Seconds"></p>
+            <input type="button" class="btn btn-primary" onClick="secToMin()" value="To Minutes">
+            <input type="button" class="btn btn-primary" onClick="secToHour()" value="To Hours">
+            <input type="button" class="btn btn-primary" onClick="secToDay()" value="To Days"><br><br>
+            <p id="secResult"></p>
+        </th>
+        <th style="background-color: #0270AB">Minutes<br>
+            <p><input type="text" id="minutes" placeholder="Minutes"></p>
+            <input type="button" class="btn btn-primary" onClick="minToSec()" value="To Seconds">
+            <input type="button" class="btn btn-primary" onClick="minToHour()" value="To Hours">
+            <input type="button" class="btn btn-primary" onClick="minToDay()" value="To Days"><br><br>
+            <p id="minResult"></p>
+        </th>
+    </tr>
+    <tr>
+        <th style="background-color: #0270AB">Hours<br>
+            <p><input type="text" id="hours" placeholder="Hours"></p>
+            <input type="button" class="btn btn-primary" onClick="hourToSec()" value="To Seconds">
+            <input type="button" class="btn btn-primary" onClick="hourToMin()" value="To Minutes">
+            <input type="button" class="btn btn-primary" onClick="hourToDay()" value="To Days"><br><br>
+            <p id="hourResult"></p>
+        </th>
+        <th style="background-color: #0270AB">Days<br>
+            <p><input type="text" id="days" placeholder="Days"></p>
+            <input type="button" class="btn btn-primary" onClick="dayToSec()" value="To Seconds">
+            <input type="button" class="btn btn-primary" onClick="dayToMin()" value="To Minutes">
+            <input type="button" class="btn btn-primary" onClick="dayToHour()" value="To Hours"><br><br>
+            <p id="dayResult"></p>
+        </th>
+    </tr>
+</table>
